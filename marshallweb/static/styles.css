@@ -1,0 +1,275 @@
+@media (max-width: 844px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Zen Dots", serif;
+        font-size: 10px;
+        font-style: normal;
+          
+        
+    }
+
+    .main-container {
+        background:linear-gradient(to right, #ac7185, #ffffff);
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .header {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #f0cdd9), url('img/marshall2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 100vw;
+        flex-basis: 20%;
+        flex-shrink: 0;
+        
+
+        
+    }
+    .date{
+        background-color: transparent;
+        color: rgb(37, 41, 73);
+        margin-top: 5%;
+        white-space: nowrap; 
+    }
+
+   
+    .navbar {
+        display: flex;
+        padding: 10px 20px;
+        background-color: transparent;
+        color: white;
+        justify-content: center;
+        
+    }
+
+    .navbar ul{
+        list-style: none;
+        
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        border: 1px solid #444;
+        border-radius: 5px;
+        
+    }
+
+    .nav-links.active{
+        display: flex;
+        top: 20%;
+        right: 12%;
+        height: 50%;
+        width: 76%;
+    }
+    .nav-links.active li{
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        height: 100%; 
+        margin: 0;
+        border-bottom: 1px solid white;
+        
+    }
+
+    
+    .nav-links a{
+        color: white;
+        font-size: 150%;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        text-align: center; 
+        
+    }
+
+    .nav-links a:hover{
+        background-color: #c2bfbf;
+        cursor: pointer;
+        
+    }
+
+    .menu-toggle{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        border: 2px solid #ffffff2c;
+        padding: 4px;
+        border-radius: 10%;
+        cursor: pointer;
+    }
+
+    
+
+
+    .main-content{
+        flex-basis: 70%;
+        flex-shrink: 0;
+        
+   
+    }
+
+    .main-index{
+        background: linear-gradient(to right, #ac7185, #ffffff); 
+        height: 100%; 
+        width: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;    
+        align-items: center;
+        gap: 2%;
+        border-top: #f0cdd9;
+        border-top-style:inset;
+        
+       
+      
+            
+        
+    
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: transparent;
+        height: 250px;
+        width: 90%;
+        flex-shrink: 0;
+        border-radius: 5px;
+        box-shadow: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 22); 
+        overflow: hidden;
+        
+        
+        
+
+    }
+
+    .card-img{
+        margin: 1%;
+        width: 98%;
+        height: 75%;
+        object-fit:cover; 
+        border-radius: 5px;
+        background-size:cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        overflow: hidden; 
+        box-sizing: border-box; 
+
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    
+
+    .button-join {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-join .join{
+        width: 60%;
+        height: 50%;
+        padding: 1px;
+        background-color: #ffffff;
+        color: #703c4e;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: 0;
+        text-shadow: 1px 1px 1px rgb(230, 169, 169);
+        font-weight: 0;
+        box-shadow: #ffffff;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 22);
+        
+ 
+
+    }
+
+    .join:hover{
+        cursor: pointer;
+    }
+
+    .card-text{
+        font-size: 11px;
+        color:white;
+        text-shadow: 1px 1px 1px rgb(138, 151, 190);
+        flex: 1;
+        padding: 5px;
+
+    }
+
+    .by-date{
+        width: 100%;
+        height: 300px;
+        background-color: transparent;
+        text-align: center;
+        
+    }
+
+    .by-date a{
+        text-decoration: none;
+        color:  rgb(37, 41, 73);
+        cursor: pointer;
+        padding: 5px;
+        border-style: groove;
+        border-radius: 5px;
+        border-color: #703c4e;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 22);
+        text-shadow: 1px 1px 1px rgb(230, 169, 169);
+    }
+
+    .footer {
+        flex-basis: 10%;
+        flex-shrink: 0;
+        background-image: url('./img/marshall3.jpg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-top: #f0cdd9;
+        border-top-style:inset;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+    }
+
+
+    
+
+    .footer-text p{
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 8px;
+    }
+    
+}  
+
+
+    
+    
+
+
+
+

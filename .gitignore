@@ -1,0 +1,12 @@
+# Entorno virtual
+venv/
+
+# Archivos de compilación de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de Django
+*.sqlite3
+
+# Archivos estáticos generados
+staticfiles/
