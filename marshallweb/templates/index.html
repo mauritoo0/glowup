@@ -4,9 +4,28 @@
 {% block content %}
 
 <div class="main-index">
+
+    <div class="reel">
+        <button class="prev">&lt;</button>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="pic"><img src="{% static 'img/pachareel.jpg' %}" alt="Image 1"></div>
+                <div class="pic"><img src="{% static 'img/shokoreel.jpg' %}" alt="Image 2"></div>
+                <div class="pic"><img src="{% static 'img/opiumreel.jpg' %}" alt="Image 3"></div>
+                <div class="pic"><img src="{% static 'img/downtownreel.jpg' %}" alt="Image 3"></div>
+            </div>
+            
+        </div>
+        <button class="next">&gt;</button>
+        <div class="reel-text">FREE LIST FOR<br> THE BESTS DISCOS IN BARCELONA</div>
+    </div>
+
+
     <div class="date">
         <p class="date-text"></p>
     </div>
+    
+    
 
     <article class="card">
         <img src="{% static 'img/pacha.jpg' %}" class="card-img" alt="Shoko">
@@ -16,6 +35,8 @@
                    Music: R&B / House<br>
                    Schedule: 0.00h – 5.30h<br>
                    Age: +18<br>
+                   Address: Mallorca, 544<br>
+                   SEE LOCATION HERE
                 </div>
                 <div class="button-join">
                     <button class="join">PACHA <br>GUEST LIST</button>
