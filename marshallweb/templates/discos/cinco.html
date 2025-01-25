@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}    
+{% load static %}
+{% block content %}
+
+
+<div class="img-disco">
+    <img src="{% static 'img/elcinco.png' %}" alt="El Cinco" id="img-elcinco">
+</div>
+
+<div class="date-disco">
+    <p class="date-today"></p>
+</div>
+
+<h1 class="day-title">TODAY</h1>
+
+<p class="day-description">
+    {{ party_today|linebreaksbr }}
+</p>
+
+<div class="img-club">
+    <img src="{% static 'img/elcincoreel.jpg' %}" alt="El Cinco">
+</div>
+
+<div class="event-description">
+    <span class="details"><strong>EVENT INFO:</strong></span>
+    <span class="details"><strong>Free Entrance</strong></span>
+
+    <span class="details"><strong><u>Schedule</u></strong>: 0.00h - 5.30h</span>
+    <span class="details"><strong><u>Age</u></strong>: +18</span>
+    <span class="details"><strong><u>Club capacity</u></strong>: 500</span>
+    <span class="details"><strong><u>How to get there</u></strong>: Metro stop: L5 Blue (H. Clínic) / Tran: T1, T2, T3 </span>
+    <span class="details"><strong><u>Dresscode</u></strong>: Casual</span>
+</div>
+
+<p class="direction">
+    Plaça de Joan Llongueras, 5 - Barcelona<br>
+    <a href="https://maps.app.goo.gl/bTzhU36c1MMfUcsq9" target="_blank">SEE MAP</a>
+</p>
+
+
+<div class="register-party">
+    <button class="button-register-party">
+        <a href="https://www.fourvenues.com/es/marshalls-list?fbclid=PAZXh0bgNhZW0CMTEAAabgyTv-w0DHhYb6akrE5CE_boJMIOhU7cTitoaYy7nYo9DGOipiOFfS6kk_aem_61fOt7tHwzfcd7iqir6xmg" target="_blank">JOIN!</a>
+    </button>
+</div>
+
+<article class="other-dates">
+    <a href="#">OTHER DATES +</a>
+
+</article>
+
+
+
+{% endblock %}
+
+

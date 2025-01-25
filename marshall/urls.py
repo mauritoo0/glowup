@@ -25,6 +25,12 @@ urlpatterns = [
     path('dates/', views.dates, name='dates'),
     path('imagen/', views.imagen, name='imagen'),
     path('photos/', views.photos, name='photos'),
+    path('pacha/', views.pacha, name='pacha'),
+    path('shoko/', views.shoko, name='shoko'),
+    path('opium/', views.opium, name='opium'),
+    path('downtown/', views.downtown, name='downtown'),
+    path('elcinco/', views.elcinco, name='elcinco'),
+    path('biblio/', views.biblio, name='biblio'),
     
     
 ]

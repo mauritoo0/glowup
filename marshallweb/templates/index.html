@@ -9,120 +9,163 @@
         <button class="prev">&lt;</button>
         <div class="carousel">
             <div class="carousel-track">
-                <div class="pic"><img src="{% static 'img/pachareel.jpg' %}" alt="Image 1"></div>
-                <div class="pic"><img src="{% static 'img/shokoreel.jpg' %}" alt="Image 2"></div>
-                <div class="pic"><img src="{% static 'img/opiumreel.jpg' %}" alt="Image 3"></div>
-                <div class="pic"><img src="{% static 'img/downtownreel.jpg' %}" alt="Image 3"></div>
+                <div class="pic"><img src="{% static 'img/pachareel.jpg' %}" alt="Pacha"></div>
+                <div class="pic"><img src="{% static 'img/shokoreel.jpg' %}" alt="Shoko"></div>
+                <div class="pic"><img src="{% static 'img/opiumreel.jpg' %}" alt="Opium"></div>
+                <div class="pic"><img src="{% static 'img/downtownreel.jpg' %}" alt="Downtown"></div>
             </div>
             
         </div>
         <button class="next">&gt;</button>
-        <div class="reel-text">FREE LIST FOR<br> THE BESTS DISCOS IN BARCELONA</div>
+        <div class="reel-text">FREE LIST FOR<br> THE BESTS CLUBS IN BARCELONA</div>
     </div>
 
+    
 
     <div class="date">
-        <p class="date-text"></p>
+        <button class="date-text-button" aria-label="Toggle navigation">
+            <div class="date-text"></div>
+        </button>   
+        <ul class="date-list">
+            <li>
+                <a href="">Sunday</a>
+            </li>
+            <li>
+                <a href="">Monday</a>
+            </li>
+            <li>
+                <a href="">Tuesday</a>
+            </li>
+            <li>
+                <a href="">Wednesday</a>
+            </li>
+            <li>
+                <a href="">Thursday</a>
+            </li>
+            <li>
+                <a href="">Friday</a>
+            </li>
+            <li>
+                <a href="">Saturday</a>
+            </li>
+        </ul>
     </div>
+
     
     
-
-    <article class="card">
-        <img src="{% static 'img/pacha.jpg' %}" class="card-img" alt="Shoko">
+<article class="card">
+        <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Shoko" id="pacha-img">
             <div class="card-content">
                 <div class="card-text">
-                   Free Entrance <br>
-                   Music: R&B / House<br>
-                   Schedule: 0.00h – 5.30h<br>
-                   Age: +18<br>
-                   Address: Mallorca, 544<br>
-                   SEE LOCATION HERE
+                   FREE ENTRANCE WITH MARSHALL'S LIST 
                 </div>
                 <div class="button-join">
-                    <button class="join">PACHA <br>GUEST LIST</button>
+                    <button class="join">
+                        <a href="{% url 'pacha' %}">GET IN!</a>
+                    </button>
                 </div>
             </div>
     </article>
 
     <article class="card">
-        <img src="{% static 'img/shoko.jpg' %}" class="card-img" alt="Pacha">
+        <img src="{% static 'img/shoko.png' %}" class="card-img" alt="Shoko">
             <div class="card-content">
                 <div class="card-text">
-                    Free Entrance <br>
-                    Music: R&B / House<br>
-                    Schedule: 0.00h – 5.30h<br>
-                    Age: +18<br>
+                    FREE ENTRANCE WITH MARSHALL'S LIST
                  </div>
-                <div class="button-join">
-                    <button class="join">SHOKO <br>GUEST LIST</button>
+                 <div class="button-join">
+                    <button class="join">
+                        <a href="{% url 'shoko' %}">GET IN!</a>
+                    </button>
                 </div>
             </div>
     </article>
 
     <article class="card">
-        <img src="{% static 'img/opium2.jpg' %}" class="card-img" alt="Opium">
+        <img src="{% static 'img/opium.png' %}" class="card-img" alt="Opium" id="img-opium">
             <div class="card-content">
                 <div class="card-text">
-                    Free Entrance <br>
-                    Music: R&B / House<br>
-                    Schedule: 0.00h – 5.30h<br>
-                    Age: +18<br>
+                    FREE ENTRANCE WITH MARSHALL'S LIST
                  </div>
-                <div class="button-join">
-                    <button class="join">OPIUM <br>GUEST LIST</button>
+                 <div class="button-join">
+                    <button class="join">
+                        <a href="{% url 'opium' %}">GET IN!</a>
+                    </button>
+                </div>
+            </div>
+    </article>
+{% if today == 'thursday' or today == 'friday'  or today == 'saturday' %} 
+    <article class="card">
+        <img src="{% static 'img/downtown.png' %}" class="card-img" alt="Downtown" id="img-dwnt">
+            <div class="card-content">
+                <div class="card-text">
+                    FREE ENTRANCE WITH MARSHALL'S LIST
+                 </div>
+                 <div class="button-join">
+                    <button class="join">
+                        <a href="{% url 'downtown' %}">GET IN!</a>
+                    </button>
                 </div>
             </div>
     </article>
 
     <article class="card">
-        <img src="{% static 'img/downtown3.jpg' %}" class="card-img" alt="Shoko">
+        <img src="{% static 'img/elcinco.png' %}" class="card-img" alt="El Cinco">
             <div class="card-content">
                 <div class="card-text">
-                    Free Entrance <br>
-                    Music: R&B / House<br>
-                    Schedule: 0.00h – 5.30h<br>
-                    Age: +18<br>
+                    FREE ENTRANCE WITH MARSHALL'S LIST
                  </div>
-                <div class="button-join">
-                    <button class="join">DOWNTOWN <br>GUEST LIST</button>
+                 <div class="button-join">
+                    <button class="join">
+                        <a href="{% url 'elcinco' %}">GET IN!</a>
+                    </button>
                 </div>
             </div>
     </article>
 
     <article class="card">
-        <img src="{% static 'img/elcinco2.jpg' %}" class="card-img" alt="Shoko">
+        <img src="{% static 'img/labiblio.png' %}" class="card-img" alt="La Biblio">
             <div class="card-content">
                 <div class="card-text">
-                    Free Entrance <br>
-                    Music: R&B / House<br>
-                    Schedule: 0.00h – 5.30h<br>
-                    Age: +18<br>
+                    FREE ENTRANCE WITH MARSHALL'S LIST
                  </div>
-                <div class="button-join">
-                    <button class="join">ELCINCO <br>GUEST LIST</button>
+                 <div class="button-join">
+                    <button class="join">
+                        <a href="{% url 'biblio' %}">GET IN!</a>
+                    </button>
                 </div>
             </div>
     </article>
-
-    <article class="card">
-        <img src="{% static 'img/biblio.jpg' %}" class="card-img" alt="Shoko">
-            <div class="card-content">
-                <div class="card-text">
-                    Free Entrance <br>
-                    Music: R&B / House<br>
-                    Schedule: 0.00h – 5.30h<br>
-                    Age: +18<br>
-                 </div>
-                <div class="button-join">
-                    <button class="join">LA BIBLIO <br>GUEST LIST</button>
-                </div>
-            </div>
-    </article>
-
-    <article class="by-date">
-        <a href="#">OR SELECT BY DATE</a>
-
-    </article>
+{% endif %}
+    
+    <div class="by-date">
+        <button class="by-date-button" aria-label="Toggle navigation">
+            <div>SELECT DAY +</div>
+        </button>   
+        <ul class="by-date-list">
+            <li>
+                <a href="">Sunday</a>
+            </li>
+            <li>
+                <a href="">Monday</a>
+            </li>
+            <li>
+                <a href="">Tuesday</a>
+            </li>
+            <li>
+                <a href="">Wednesday</a>
+            </li>
+            <li>
+                <a href="">Thursday</a>
+            </li>
+            <li>
+                <a href="">Friday</a>
+            </li>
+            <li>
+                <a href="">Saturday</a>
+            </li>
+        </ul>
+    </div>
 
     
 
