@@ -8,8 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     const menuDate = document.querySelector('.date-text-button');
     const dateList = document.querySelector('.date-list');
-    const byDateBut = document.querySelector('.by-date-button');
-    const byDateLi = document.querySelector('.by-date-list');
+    const byDateBut = document.querySelectorAll('.by-date-button');
+    
+    
+
+    //Aplicando target y ID a los diferentes botones de "Select day +" para que funcionen los eventos de JS
+
+if (byDateBut.length > 0) {
+    byDateBut.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const menu = document.getElementById(`menu-${index}`);
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        });
+    });
+} 
+
+    
+    
+    
 
 //Obteniendo los valores de la fechad e hoy
 const currentDate = new Date();
@@ -47,9 +65,8 @@ menuDate.addEventListener('click', ()=> {
     dateList.classList.toggle('active');
 })
 
-byDateBut.addEventListener('click', ()=> {
-    byDateLi.classList.toggle('active');
-})
+
+    
 
 
 //Exceptuando los html que no tienen el carrusel para que no arroje error la consola de los mismos
@@ -86,3 +103,4 @@ prevButton.addEventListener('click', () => {
 });
 
 })
+
