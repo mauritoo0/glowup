@@ -150,3 +150,7 @@ def biblio(request):
    
                   
     })    
+
+
+def cookies(request):
+    return render(request, 'cookies.html')
