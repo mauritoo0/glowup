@@ -9,98 +9,113 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDate = document.querySelector('.date-text-button');
     const dateList = document.querySelector('.date-list');
     const byDateBut = document.querySelectorAll('.by-date-button');
-    
-    
 
-    //Aplicando target y ID a los diferentes botones de "Select day +" para que funcionen los eventos de JS
-
-if (byDateBut.length > 0) {
-    byDateBut.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const menu = document.getElementById(`menu-${index}`);
-            if (menu) {
-                menu.classList.toggle('active');
-            }
+    // Inicializar cookie consent
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": { "background": "#000" },
+                "button": { "background": "#f1d600" }
+            },
+            "theme": "classic",
+            "position": "bottom",
+            "content": {
+                "message": "This website uses cookies to ensure you get the best experience on our website.",
+                "dismiss": "Agree",
+                "link": "More",
+                "href": "/cookies"
+            },
+            "width": "100vw",
+            "language": "en"
         });
-    });
-} 
 
+    // Aplicando target y ID a los botones de "Select day +"
+    if (byDateBut.length > 0) {
+        byDateBut.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                const menu = document.getElementById(`menu-${index}`);
+                if (menu) {
+                    menu.classList.toggle('active');
+                }
+            });
+        });
+    }
     
-    
-    
+    // Obteniendo valores de la fecha de hoy
+    const currentDate = new Date();
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-//Obteniendo los valores de la fechad e hoy
-const currentDate = new Date();
-const weekdays = ['sunday',' monday','tuesday','wednesday','thursday','friday','saturday']
-const months = ['january','february','march','april','may','june','july','august','september', 'october','november','december']
-const weekday = weekdays[currentDate.getDay()]
-const day = currentDate.getDate()
-const month = months[currentDate.getMonth()]
+    const weekday = weekdays[currentDate.getDay()];
+    const day = currentDate.getDate();
+    const month = months[currentDate.getMonth()];
 
-//funcion para aplicar el sufijo detras de la fecha
-function getDaySuffix(day) {
-    if (day % 10 === 1 && day !== 11) return 'st';
-    if (day % 10 === 2 && day !== 12) return 'nd';
-    if (day % 10 === 3 && day !== 13) return 'rd';
-    return 'th';
-}
-
-//Guardada en variables la fecha de hoy e insertandola en el html
-const guestDate = `${weekday.toUpperCase()} ${day}${getDaySuffix(day)} OF ${month.toUpperCase()} <span class="icon-down"><i class="fa-solid fa-caret-down"></i></span>`;
-const todayDate = `${weekday.toUpperCase()} ${day} OF ${month.toUpperCase()}`;
-
-
-    if (dateDiv || dateToday) {
-        if (dateDiv) dateDiv.innerHTML = guestDate;
-        if (dateToday) dateToday.textContent = todayDate;
+    // Función para aplicar el sufijo detrás del número del día
+    function getDaySuffix(day) {
+        if (day % 10 === 1 && day !== 11) return 'st';
+        if (day % 10 === 2 && day !== 12) return 'nd';
+        if (day % 10 === 3 && day !== 13) return 'rd';
+        return 'th';
     }
 
+    // Generar fecha con sufijo
+    const guestDate = `${weekday.toUpperCase()} ${day}${getDaySuffix(day)} OF ${month.toUpperCase()} <span class="icon-down"><i class="fa-solid fa-caret-down"></i></span>`;
+    const todayDate = `${weekday.toUpperCase()} ${day} OF ${month.toUpperCase()}`;
 
-//Agregada la clase 'active' en los botones desplegables del index para mostrar las li
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    // Insertar fecha en el HTML si los elementos existen
+    if (dateDiv) dateDiv.innerHTML = guestDate;
+    if (dateToday) dateToday.textContent = todayDate;
 
-menuDate.addEventListener('click', ()=> {
-    dateList.classList.toggle('active');
-})
+    // Agregar clase 'active' al menú de navegación
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 
+    if (menuDate && dateList) {
+        menuDate.addEventListener('click', () => {
+            dateList.classList.toggle('active');
+        });
+    }
 
-    
-
-
-//Exceptuando los html que no tienen el carrusel para que no arroje error la consola de los mismos
+    // Evitar errores si el carrusel no existe en la página
     if (!track) {
         console.warn("No se encontró un elemento '.carousel-track' en esta página.");
         return;
     }
 
-//Creado el carrusel de imagenes del index   
-const pics = Array.from(track.children);
+    // Crear carrusel de imágenes
+    const pics = Array.from(track.children);
+    if (pics.length === 0) return;  // Evitar errores si el track está vacío
 
-const imageWidth = pics[0].getBoundingClientRect().width;
+    const imageWidth = pics[0].getBoundingClientRect().width;
+    let currentIndex = 0;
 
-let currentIndex = 0;
+    const moveToSlide = (index) => {
+        const amountToMove = -index * imageWidth;
+        track.style.transform = `translateX(${amountToMove}px)`;
+    };
 
-const moveToSlide = (index) => {
-    const amountToMove = -index * imageWidth;
-    track.style.transform = `translateX(${amountToMove}px)`;
-};
-
-//Botones de 'adelante' y 'atrás' del carrusel
-nextButton.addEventListener('click', () => {
-    if (currentIndex < pics.length - 1) {
-        currentIndex++;
-        moveToSlide(currentIndex);
+    // Botones del carrusel
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < pics.length - 1) {
+                currentIndex++;
+                moveToSlide(currentIndex);
+            }
+        });
     }
-});
 
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        moveToSlide(currentIndex);
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                moveToSlide(currentIndex);
+            }
+        });
     }
+
+    
+    });
 });
-
-})
-

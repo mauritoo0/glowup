@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.0/build/cookieconsent.min.js"></script>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+
 </head>
 <body>
 
@@ -77,34 +80,9 @@
             <p><a href="#">Privacy Policy</a> - Copyright. All rights reserved. 2024
             </p>
         </div>     
-                      
+                 
     </footer>
 </div>
-<script>
-    window.addEventListener("load", function() {
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#000"
-          },
-          "button": {
-            "background": "#f1d600"
-          }
-        },
-        "theme": "classic",
-        "position": "bottom",
-        "content": {
-          "message": "This website uses cookies to ensure you get the best experience on our website.",
-          "dismiss": "Agree",
-          "link": "More",
-          "href": "/cookies"  
-        },
-        "width": "100vw",
-        "language": "en" , 
-      });
-    });
-  </script>
-<script src="{% static 'js/script.js' %}"></script>
 
 </body>
 </html>
