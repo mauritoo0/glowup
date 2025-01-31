@@ -10,14 +10,10 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,    500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Familjen+Grotesk:ital,wght@0,400..700;1,   400..700&family=Genos:ital,wght@0,100..900;1,100..900&family=Goldman:wght@400;700& family=Raleway:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300&family=Sarabun:ital,  wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;   1,800&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Familjen+Grotesk:wght@400..700&family=Genos:wght@100..900&family=Goldman:wght@400;700&family=Raleway:wght@100..900&family=Rowdies:wght@300&family=Sarabun:wght@100..800&family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.0/build/cookieconsent.min.js"></script>
-    
-    <script src="{% static 'js/script.js' %}"></script>
-
 </head>
 <body>
 
@@ -27,7 +23,7 @@
                 <a href="https://www.instagram.com/marshallsguestlist" target="_blank" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="#" target="_blank" aria-label="Instagram">
+                <a href="#" target="_blank" aria-label="Whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
                 
@@ -83,6 +79,25 @@
                  
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.0/build/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": { "background": "#222" },
+                    "button": { "background": "#f1d600" }
+                },
+                "theme": "classic",
+                "content": {
+                    "message": "Este sitio usa cookies para mejorar la experiencia.",
+                    "dismiss": "Aceptar",
+                    "link": "Más información",
+                    "href": "/cookies"
+                }
+            });
+        });
+    </script>
 
+<script src="{% static 'js/script.js' %}" defer></script>
 </body>
 </html>
