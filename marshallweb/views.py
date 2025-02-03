@@ -26,9 +26,9 @@ def dates(request):
     })
     
 
-def imagen(request):
-    return render(request, 'imagen.html', {
-    'title': 'Imagen',   
+def contact(request):
+    return render(request, 'contact.html', {
+    'title': 'Contact us',   
     })
 
 
