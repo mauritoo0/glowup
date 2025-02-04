@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('nightclubs/', views.nightclubs, name='nightclubs'),
-    path('dates/', views.dates, name='dates'),
+    path('date/<str:day>', views.date, name='date'),
     path('contact/', views.contact, name='contact'),
     path('photos/', views.photos, name='photos'),
     path('pacha/', views.pacha, name='pacha'),

@@ -2,17 +2,18 @@
 {% load static %}
 {% block content %}
 
-<article class="card-details">
+<h1 class="party-today">{{title}}</h1>
+
+<article class="card">
     <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Shoko" id="pacha-img">
-        <div class="card-content-details">
-            <div class="card-text-details">
-                <span class="details-disco">Paseo de la Barceloneta 08003</span>
-                <span class="details-disco">Sundays to Saturdays</span>
-                <span class="details-disco">0.00h - 5.30h</span>
-                <span class="details-disco">Reggaeton - Hip Hop - Top Hits</span>
-                <span class="details-disco">+18</span>
-                <span class="details-disco">Casual & elegant</span>
-                
+        <div class="card-content">
+            <div class="card-text">
+               FREE ENTRANCE WITH MARSHALL'S LIST 
+            </div>
+            <div class="button-join">
+                <button class="join">
+                    <a href="{% url 'pacha' %}">GET IN!</a>
+                </button>
             </div>
         </div>
 </article>
@@ -44,6 +45,9 @@
             </div>
         </div>
 </article>
+
+
+{% if day == 'thursday' or day == 'friday'  or day == 'saturday' %} 
 
 <article class="card">
     <img src="{% static 'img/downtown.png' %}" class="card-img" alt="Downtown" id="img-dwnt">
@@ -86,8 +90,35 @@
             </div>
         </div>
 </article>
+{% endif %}
 
-
+<div class="by-date">
+    <button class="by-date-button">
+        <div>OTHER DATES +</div>
+    </button>   
+    <ul class="by-date-list">
+        <li>
+            <a href="{% url 'date' 'sunday' %}">Sunday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'monday' %}">Monday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'tuesday' %}">Tuesday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'wednesday' %}">Wednesday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'thursday' %}">Thursday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'friday' %}">Friday</a>
+        </li>
+        <li>
+            <a href="{% url 'date' 'saturday' %}">Saturday</a>
+        </li>
+    </ul>
 
 {% endblock %}
 

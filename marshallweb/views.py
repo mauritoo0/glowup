@@ -20,9 +20,12 @@ def nightclubs(request):
     })
     
       
-def dates(request):
-    return render(request, 'dates.html', {
-    'title': 'Dates',   
+def date(request, day):
+    day.lower()
+    
+    return render(request, 'date.html', {
+    'title': f'PARTIES ON {day.upper()}S',   
+    'day': day
     })
     
 
