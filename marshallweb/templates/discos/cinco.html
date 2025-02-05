@@ -32,35 +32,25 @@
     <span class="details"><strong><u>Dresscode</u></strong>: Casual</span>
 </div>
 
-<p class="direction">
+<p class="address">
     Plaça de Joan Llongueras, 5 - Barcelona<br>
     <a href="https://maps.app.goo.gl/bTzhU36c1MMfUcsq9" target="_blank">SEE MAP</a>
 </p>
 
 
+{% if party_today == True %}
 <div class="register-party">
     <button class="button-register-party">
         <a href="https://www.fourvenues.com/es/marshalls-list?fbclid=PAZXh0bgNhZW0CMTEAAabgyTv-w0DHhYb6akrE5CE_boJMIOhU7cTitoaYy7nYo9DGOipiOFfS6kk_aem_61fOt7tHwzfcd7iqir6xmg" target="_blank">JOIN!</a>
     </button>
 </div>
+{% endif %}
 
 <div class="by-date">
     <button class="by-date-button">
         <div>SELECT DAY +</div>
     </button>   
     <ul class="by-date-list">
-        <li>
-            <a href="{% url 'date' 'sunday' %}">Sunday</a>
-        </li>
-        <li>
-            <a href="{% url 'date' 'monday' %}">Monday</a>
-        </li>
-        <li>
-            <a href="{% url 'date' 'tuesday' %}">Tuesday</a>
-        </li>
-        <li>
-            <a href="{% url 'date' 'wednesday' %}">Wednesday</a>
-        </li>
         <li>
             <a href="{% url 'date' 'thursday' %}">Thursday</a>
         </li>

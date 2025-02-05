@@ -8,7 +8,7 @@
         letter-spacing: 0.2em;
         box-sizing: border-box; 
           
-        
+       
     }
 
     body{
@@ -16,8 +16,9 @@
         height: auto;
         
     }
+    /*LAYOUT 'BASE.HTML'*/
 
-   
+    /*Entire website main container */
     .main-container {
         display: flex;
         flex-direction: column;
@@ -26,6 +27,7 @@
         background: linear-gradient(to right, #0e0e0e, #474747); 
     }
 
+    /*Header */
     .header {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #f0cdd9), url('img/marshall2.jpg');
         background-position: center;
@@ -39,6 +41,7 @@
         
     }
 
+    /*Social media navigation bar */
     .rrss{
         background-color: transparent;
         display: flex;
@@ -60,7 +63,8 @@
     .rrss a:hover {
         color: #ccc;
     }
-   
+    
+    /*Interactive navigation bar */
     .navbar {
         display: flex;
         padding: 10px 20px;
@@ -131,6 +135,7 @@
         
     }
 
+    /*Navbar button */
     .menu-toggle{
         display: flex;
         color: rgba(255, 255, 255, 0.678);
@@ -150,7 +155,8 @@
         padding: 0 5px 0 5px;
         
     }
-
+    
+    /* Back button */
     .back {
         position: absolute;
         top: 80%;
@@ -169,6 +175,7 @@
         text-shadow: 1px 1px 5px black;
     }
 
+    /* Main container inside the 'block content' from base.html */
     .main-content{
         display: flex;
         height: auto;
@@ -179,6 +186,111 @@
         
     }
 
+    /* footer */
+
+    .footer {
+        padding: 0 0 3% 0;
+        background-image: url('./img/marshall3.jpg');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-top: #f0cdd9;
+        border-top-style:inset;
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        flex-direction: column;
+        
+        
+    }
+
+
+    .footer-you {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        
+        
+    }
+
+    .footer-you p{
+        width: 35%;
+        font-size: 10px;
+        color: rgb(204, 204, 204);
+        white-space: nowrap;
+        padding: 0 0 0 3%;
+        
+        
+    }
+    .footer-you img{
+        width: 30%;
+        height: 80%;
+        
+    }
+
+    .footer-text-rights{
+        display: flex;
+        margin-top: 6vh;
+        margin-left: 40%;
+    
+    }
+
+    .footer-text-rights p{
+        color: rgb(204, 204, 204);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 8px;
+       
+    }
+
+    .footer-text-rights a{
+        text-decoration: none;
+        color: rgb(204, 204, 204);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 8px;
+       
+    }
+
+    /* Floating chatbot button */
+    .ia {
+        display: flex;
+        flex-direction: column;
+        bottom: 10px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        color: white;
+        background-image: url('./img/contact/ia.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.7;
+        border-radius: 50%;
+        align-items: center;    
+        justify-content: center;
+        gap: 10%;
+        text-decoration: none;
+    }  
+    
+       
+    .ia:hover{
+        cursor: pointer;
+    }
+
+    .help-bot {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 90%;
+        font-weight: 800;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.486);
+        
+    }
+
+    /*END LAYOUT 'BASE.HTML'*/
+    
+    
+    /* 'INDEX.HTML' TEMPLATE */        
+    /* Main container from index */
     .main-index{
         background: linear-gradient(to right, #0e0e0e, #474747); 
         display: flex;
@@ -189,6 +301,7 @@
         border-top-style:inset;
     }
 
+    /* Reel from index */
     .reel {
         display: flex;
         align-items: center;
@@ -254,6 +367,8 @@
         margin-top: 35%;
     }    
     
+    /* Date from index */
+
     .date{
         margin: 5%;
         display: flex;
@@ -297,6 +412,8 @@
 
         
     }
+
+    /* Date navbar from index */
 
     .date-list{
         display: none;
@@ -359,6 +476,7 @@
         
     }
 
+    /* Disco's cards */
     .card {
         margin: 5%;
         display: flex;
@@ -368,7 +486,7 @@
         height: 250px;
         width: 90%;
         border-radius: 5px;
-        box-shadow: 3px 3px 10px #000000;
+        box-shadow: 4px 4px 5px #000000;
          
      }
 
@@ -458,7 +576,7 @@
     }
 
     
-
+    /* navbar 'select day' from viewport's bottom */
     .by-date{
         width: 100%;
         height: 100%;
@@ -483,10 +601,6 @@
         cursor: pointer;
     }
    
-   
-    
-
-
     .by-date-list{
         display: none;
         position: absolute;
@@ -536,71 +650,10 @@
     }
 
 
-
-
-    .footer {
-        padding: 0 0 3% 0;
-        background-image: url('./img/marshall3.jpg');
-        background-size:cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-top: #f0cdd9;
-        border-top-style:inset;
-        display: flex;
-        width: 100%;
-        height: 10vh;
-        flex-direction: column;
-        
-        
-    }
-
-
-    .footer-you {
-        width: 100%;
-        height: 20%;
-        display: flex;
-        
-        
-    }
-
-    .footer-you p{
-        width: 35%;
-        font-size: 10px;
-        color: rgb(204, 204, 204);
-        white-space: nowrap;
-        padding: 0 0 0 3%;
-        
-        
-    }
-    .footer-you img{
-        width: 30%;
-        height: 80%;
-        
-    }
-
-    .footer-text-rights{
-        display: flex;
-        margin-top: 6vh;
-        margin-left: 40%;
+    /* END 'INDEX' TEMPLATE */
     
-    }
-
-    .footer-text-rights p{
-        color: rgb(204, 204, 204);
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 8px;
-       
-    }
-
-    .footer-text-rights a{
-        text-decoration: none;
-        color: rgb(204, 204, 204);
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 8px;
-       
-    }
-
-    
+    /*'DISCOS' TEMPLATES*/
+    /* Title images from club's templates */
     .img-title-club {
         display: flex;
         align-items: center;
@@ -608,16 +661,15 @@
         width: 100vw;
         height: 20vh;
         
-        
+       
     }
 
     .img-title-club img {
         width: 60%;
-       
-        
         
     }
     
+    /* Day title for template's clubs */
     .day-title{
         width: 100%;
         text-align: center;
@@ -626,7 +678,7 @@
     
     }
 
-
+    /* Day descriptions from template's club */
     .day-description{
        padding: 10%;
        width: 80%;
@@ -638,6 +690,7 @@
        
      }
 
+    /* Disco images */ 
     .img-club {
         width: 90%;
         height: 25vh;
@@ -661,6 +714,7 @@
     
     }
 
+    /*Disco and events description*/
     .event-description{
         display: flex;
         flex-direction: column;
@@ -678,7 +732,8 @@
         margin-bottom: 5px;
     }
 
-    .direction{
+    /*Disco's address */ 
+    .address{
         width: 80%;
         padding: 10%;
         color: rgb(255, 255, 255);
@@ -687,7 +742,7 @@
         
     }
 
-    .direction a{
+    .address a{
         color: rgb(255, 255, 255);
         text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
         text-decoration: none;
@@ -697,6 +752,7 @@
         
     }
 
+    /*Button to join party and redirect out */
     .register-party {
         display: flex;
         justify-content: center;
@@ -729,44 +785,10 @@
         cursor: pointer;
     }
 
-    .ia {
-        display: flex;
-        flex-direction: column;
-        bottom: 10px;
-        right: 20px;
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        color: white;
-        background-image: url('./img/contact/ia.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.7;
-        border-radius: 50%;
-        align-items: center;    
-        justify-content: center;
-        gap: 10%;
-        text-decoration: none;
-    }  
     
-    
-    
-    .ia:hover{
-        cursor: pointer;
-    }
+    /*ENDS 'DISCOS' TEMPLATES*/
 
-    .help-bot {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 90%;
-        font-weight: 800;
-        flex-wrap: wrap;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.486);
-        
-        
-    }
-
-
+    /*'CONTACT US' TEMPLATE */
     .contact-container {
         display: flex;
         flex-direction: column;
@@ -795,13 +817,18 @@
         display: flex;
         object-fit: contain;
         background-color: transparent;
-        height: 13vh;
+        height: 15vh;
+        padding: 5%;
         filter: drop-shadow(
-            3px 3px 2px rgba(250, 250, 250, 0.733)
+            2px 2px 2px rgba(250, 250, 250, 0.733)
         )
         
+        
     }
-    
+    /* END 'CONTACT US' TEMPLATE*/
+
+
+    /* 'DATE' TEMPLATE */    
     .party-today{
         margin: 5% 0;
         text-align: center;
@@ -809,19 +836,25 @@
         text-shadow: 1.5px 1.5px 5px rgb(3, 3, 3);
         font-size: 175%;
     }
+    /* END 'DATE TEMPLATE */
 
+    /* 'NIGHTCLUBS' TEMPLATE */
     .card-details {
         margin: 5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to right, #d2e0e9, #ffffff);
-        height: 300px;
+        background: linear-gradient(to right, #f7d6ec, #fffeff);
+        height: 400px;
         width: 90%;
         border-radius: 5px;
         box-shadow: 3px 3px 10px #000000;
          
      }
+
+    .card-details, #pacha-img{
+        filter: none,
+    } 
 
     }
     
@@ -856,6 +889,31 @@
         font-size: 75%;
     }
 
+    .card-text-details button{
+        display: flex;
+        align-self: center;
+        text-align: center;
+        
 
+    }
 
+    .card-text-details button a{
+        color: #f0f0f0;
+        margin-left: 3px;
+
+    }
+
+    .card-text-details a{
+        display: flex;
+        align-self: center;
+        margin: 5% 0;
+        text-decoration: none;
+        color:rgba(0, 0, 0, 0.747);
+        cursor: pointer;
+    }
     
+    .details-not-today{
+        font-size: 70%;
+    }
+
+    /*END 'NIGHTCLUBS' TEMPLATE*/

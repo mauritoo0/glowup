@@ -3,88 +3,132 @@
 {% block content %}
 
 <article class="card-details">
-    <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Shoko" id="pacha-img">
+    <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Pacha" id="pacha-img">
         <div class="card-content-details">
             <div class="card-text-details">
-                <span class="details-disco">Paseo de la Barceloneta 08003</span>
-                <span class="details-disco">Sundays to Saturdays</span>
+                <span class="details-disco">Paseo de la Barceloneta - 08003</span>
+                <span class="details-disco">Open everynight</span>
                 <span class="details-disco">0.00h - 5.30h</span>
                 <span class="details-disco">Reggaeton - Hip Hop - Top Hits</span>
+                <span class="details">+1.500 people capacity</span>
                 <span class="details-disco">+18</span>
                 <span class="details-disco">Casual & elegant</span>
+                <a href="https://www.pachabarcelona.es/" class="details-disco" target="_blank">Oficial website</a>
+                <button class="join">
+                    <a href="{% url 'pacha' %}">LIST FOR TONIGHT</a>
+                </button>
                 
             </div>
         </div>
 </article>
 
-<article class="card">
+<article class="card-details">
     <img src="{% static 'img/shoko.png' %}" class="card-img" alt="Shoko">
-        <div class="card-content">
-            <div class="card-text">
-                FREE ENTRANCE WITH MARSHALL'S LIST
-             </div>
-             <div class="button-join">
-                <button class="join">
-                    <a href="{% url 'shoko' %}">GET IN!</a>
-                </button>
-            </div>
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Paseo de la Barceloneta - 08003</span>
+            <span class="details-disco">Open everynight</span>
+            <span class="details-disco">0.00h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Hip Hop - Top Hits - Comercial</span>
+            <span class="details">+500 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Casual & elegant</span>
+            <a href="https://shoko.biz/" class="details-disco" target="_blank">Oficial website</a>
+            <button class="join">
+                <a href="{% url 'shoko' %}">LIST FOR TONIGHT</a>
+            </button>
+            
         </div>
+    </div>
 </article>
 
-<article class="card">
+<article class="card-details">
     <img src="{% static 'img/opium.png' %}" class="card-img" alt="Opium" id="img-opium">
-        <div class="card-content">
-            <div class="card-text">
-                FREE ENTRANCE WITH MARSHALL'S LIST
-             </div>
-             <div class="button-join">
-                <button class="join">
-                    <a href="{% url 'opium' %}">GET IN!</a>
-                </button>
-            </div>
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Paseo de la Barceloneta - 08003</span>
+            <span class="details-disco">Open everynight</span>
+            <span class="details-disco">23.30h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Latin - Top Hits - House</span>
+            <span class="details">+500 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Elegant</span>
+            <a href="https://opiumbarcelona.com/" class="details-disco" target="_blank">Oficial website</a>
+            <button class="join">
+                <a href="{% url 'opium' %}">LIST FOR TONIGHT</a>
+            </button>
+            
         </div>
+    </div>
 </article>
 
-<article class="card">
+<article class="card-details">
     <img src="{% static 'img/downtown.png' %}" class="card-img" alt="Downtown" id="img-dwnt">
-        <div class="card-content">
-            <div class="card-text">
-                FREE ENTRANCE WITH MARSHALL'S LIST
-             </div>
-             <div class="button-join">
-                <button class="join">
-                    <a href="{% url 'downtown' %}">GET IN!</a>
-                </button>
-            </div>
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Av. Dr. Marañón, 17 - Barcelona</span>
+            <span class="details-disco">Open Thursdays, Fridays & Saturdays</span>
+            <span class="details-disco">0.00h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Top Hits</span>
+            <span class="details">+500 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Casual & elegant</span>
+            <a href="https://downtownbarcelona.es/" class="details-disco" target="_blank">Oficial website</a>
+            {% if party_today == True %}
+            <button class="join">
+                <a href="{% url 'downtown' %}">LIST FOR TONIGHT</a>
+            </button>
+            {% else %}
+                <div class="details-not-today">There are no events scheduled for today</div>
+            {% endif %}
         </div>
+    </div>
 </article>
 
-<article class="card">
+<article class="card-details">
     <img src="{% static 'img/elcinco.png' %}" class="card-img" alt="El Cinco">
-        <div class="card-content">
-            <div class="card-text">
-                FREE ENTRANCE WITH MARSHALL'S LIST
-             </div>
-             <div class="button-join">
-                <button class="join">
-                    <a href="{% url 'elcinco' %}">GET IN!</a>
-                </button>
-            </div>
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Plaça de Joan Llongueras, 5</span>
+            <span class="details-disco">Open Thursdays, Fridays & Saturdays</span>
+            <span class="details-disco">0.00h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Top Hits</span>
+            <span class="details">+500 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Casual</span>
+            <a href="https://www.elcinco.barcelona/" class="details-disco" target="_blank">Oficial website</a>
+            {% if party_today == True %}
+            <button class="join">
+                <a href="{% url 'elcinco' %}">LIST FOR TONIGHT</a>
+            </button>
+            {% else %}
+                <div class="details-not-today">There are no events scheduled for today</div>
+            {% endif %}
         </div>
+    </div>
 </article>
 
-<article class="card">
+<article class="card-details">
     <img src="{% static 'img/labiblio.png' %}" class="card-img" alt="La Biblio">
-        <div class="card-content">
-            <div class="card-text">
-                FREE ENTRANCE WITH MARSHALL'S LIST
-             </div>
-             <div class="button-join">
-                <button class="join">
-                    <a href="{% url 'biblio' %}">GET IN!</a>
-                </button>
-            </div>
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Carrer de Moià, 1</span>
+            <span class="details-disco">Open Thursdays, Fridays & Saturdays</span>
+            <span class="details-disco">0.00h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Hip Hop - Top Hits</span>
+            <span class="details">+500 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Casual & elegant</span>
+            <a href="https://www.labibliobcn.com/" class="details-disco" target="_blank">Oficial website</a>
+            {% if party_today == True %}
+            <button class="join">
+                <a href="{% url 'biblio' %}">LIST FOR TONIGHT</a>
+            </button>
+            {% else %}
+                <div class="details-not-today">There are no events scheduled for today</div>
+            {% endif %}
         </div>
+    </div>
 </article>
 
 

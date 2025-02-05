@@ -24,7 +24,7 @@ def date(request, day):
     day.lower()
     
     return render(request, 'date.html', {
-    'title': f'PARTIES ON {day.upper()}S',   
+    'title': f'EVENTS ON {day.upper()}S',   
     'day': day
     })
     
