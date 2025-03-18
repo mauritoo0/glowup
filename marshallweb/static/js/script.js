@@ -12,6 +12,7 @@ const byDateList = document.querySelector('.by-date-list');
 
 
 
+
 // Obteniendo valores de la fecha de hoy
 const currentDate = new Date();
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -59,12 +60,12 @@ if (byDateButton && byDateList) {
 
 // Evitar errores si el carrusel no existe en la página
 if (!track) {
-    console.warn("No se encontró un elemento '.carousel-track' en esta página.");
+    console.warn("There is not '.carousel-track' item on this page.");
     } else {
     // Crear carrusel de imágenes
     const pics = Array.from(track.children);
     if (pics.length === 0) {
-        console.warn("El carrusel está vacío.");
+        console.warn("Carousel is empty");
     } else {
         const imageWidth = pics[0].getBoundingClientRect().width;
     
@@ -93,3 +94,4 @@ if (!track) {
         }
     }
 }
+

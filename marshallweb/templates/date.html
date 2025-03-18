@@ -2,8 +2,11 @@
 {% load static %}
 {% block content %}
 
+<!-- CORREGIR CUANDO SELECCIONO UN DIA, 'EVENTS ON FRIDAY' Y APARECEN LOS CLUBES PERO CON LOS EVENTOS DE HOY-->
+
 <h1 class="party-today">{{title}}</h1>
 
+<div class="party-today-container">
 <article class="card">
     <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Shoko" id="pacha-img">
         <div class="card-content">
@@ -91,7 +94,7 @@
         </div>
 </article>
 {% endif %}
-
+</div>
 <div class="by-date">
     <button class="by-date-button">
         <div>OTHER DATES +</div>
