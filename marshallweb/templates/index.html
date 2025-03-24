@@ -10,9 +10,9 @@
         <div class="carousel">
             <div class="carousel-track">
                 <div class="pic"><img src="{% static 'img/pachareel.jpg' %}" alt="Pacha"></div>
-                <div class="pic"><img src="{% static 'img/shokoreel.jpg' %}" alt="Shoko"></div>
                 <div class="pic"><img src="{% static 'img/opiumreel.jpg' %}" alt="Opium"></div>
-                <div class="pic"><img src="{% static 'img/downtownreel.jpg' %}" alt="Downtown"></div>
+                <div class="pic"><img src="{% static 'img/downtownreel.jpg' %}" id="downtownreel" alt="Downtown"></div>
+                <div class="pic"><img src="{% static 'img/ottoreel.jpg' %}" alt="Otto"></div>
             </div>
             
         </div>
@@ -58,7 +58,7 @@
         <img src="{% static 'img/pachapng.png' %}" class="card-img" alt="Pacha" id="pacha-img">
             <div class="card-content">
                 <div class="card-text">
-                   FREE ENTRANCE WITH MARSHALL'S LIST 
+                   FREE ENTRANCE WITH GLOW UP'S LIST 
                 </div>
                 <div class="button-join">
                     <button class="join">
@@ -69,24 +69,10 @@
     </article>
 
     <article class="card">
-        <img src="{% static 'img/shoko.png' %}" class="card-img" alt="Shoko">
-            <div class="card-content">
-                <div class="card-text">
-                    FREE ENTRANCE WITH MARSHALL'S LIST
-                 </div>
-                 <div class="button-join">
-                    <button class="join">
-                        <a href="{% url 'shoko' %}">GET IN!</a>
-                    </button>
-                </div>
-            </div>
-    </article>
-
-    <article class="card">
         <img src="{% static 'img/opium.png' %}" class="card-img" alt="Opium" id="img-opium">
             <div class="card-content">
                 <div class="card-text">
-                    FREE ENTRANCE WITH MARSHALL'S LIST
+                    FREE ENTRANCE WITH GLOW UP'S LIST
                  </div>
                  <div class="button-join">
                     <button class="join">
@@ -95,12 +81,15 @@
                 </div>
             </div>
     </article>
-{% if today == 'thursday' or today == 'friday'  or today == 'saturday' %} 
+
+{% if today == 'thursday' or today == 'friday'  or today == 'saturday' %}
+    
+ 
     <article class="card">
         <img src="{% static 'img/downtown.png' %}" class="card-img" alt="Downtown" id="img-dwnt">
             <div class="card-content">
                 <div class="card-text">
-                    FREE ENTRANCE WITH MARSHALL'S LIST
+                    FREE ENTRANCE GLOW UP'S LIST
                  </div>
                  <div class="button-join">
                     <button class="join">
@@ -111,28 +100,28 @@
     </article>
 
     <article class="card">
-        <img src="{% static 'img/elcinco.png' %}" class="card-img" alt="El Cinco">
+        <img src="{% static 'img/labiblio.png' %}" class="card-img" alt="La Biblio">
             <div class="card-content">
                 <div class="card-text">
-                    FREE ENTRANCE WITH MARSHALL'S LIST
+                    FREE ENTRANCE WITH GLOW UP'S LIST
                  </div>
                  <div class="button-join">
                     <button class="join">
-                        <a href="{% url 'elcinco' %}">GET IN!</a>
+                        <a href="{% url 'biblio' %}">GET IN!</a>
                     </button>
                 </div>
             </div>
     </article>
 
     <article class="card">
-        <img src="{% static 'img/labiblio.png' %}" class="card-img" alt="La Biblio">
+        <img src="{% static 'img/otto.png' %}" class="card-img" alt="Otto">
             <div class="card-content">
                 <div class="card-text">
-                    FREE ENTRANCE WITH MARSHALL'S LIST
+                    FREE ENTRANCE WITH GLOW UP'S LIST
                  </div>
                  <div class="button-join">
                     <button class="join">
-                        <a href="{% url 'biblio' %}">GET IN!</a>
+                        <a href="{% url 'otto' %}">GET IN!</a>
                     </button>
                 </div>
             </div>

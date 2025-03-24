@@ -71,20 +71,17 @@ def pacha(request):
                   
     })    
 
-def shoko(request):
+def otto(request):
     parties = {
-        'monday': 'FUCKING MONDAY BY SHÔKO MONDAZE',
-        'tuesday': 'KISS KISS BANG BANG\nComercial | Reggaeton | Hip Hop',
-        'wednesday': 'POP THAT PARTY\nHip Hop | R&B | Hits ',
         'thursday': 'PURO PERREO\nReggaeton | Trap | Dembow',
         'friday': 'BLACK DRAGON\nHip Hop | Open format | Hits',
         'saturday': 'PURE SHÔKO\nDJ PAPIS - DJ OUMAR',
-        'sunday': 'LEVEL UP\nHip Hop | Open format | Hits'
+        
     }
 
     party_today = parties.get(today, "There are no events scheduled for today")
-    return render(request, 'discos/shoko.html', {
-    'title': 'Shoko',
+    return render(request, 'discos/otto.html', {
+    'title': 'Otto',
     'party_today': party_today,   
    
                   
@@ -119,21 +116,6 @@ def downtown(request):
     party_today = parties.get(today, "There are no events scheduled for today")
     return render(request, 'discos/downtown.html', {
     'title': 'Downtown',
-    'party_today': party_today,   
-   
-                  
-    })    
-
-def elcinco(request):
-    parties = {
-        'thursday': 'Thursdays El Cinco\nTop Hits | Reggaeton',
-        'friday': 'Thursdays El Cinco\nTop Hits | Reggaeton',
-        'saturday': 'Thursdays El Cinco\nTop Hits | Reggaeton',
-    }
-
-    party_today = parties.get(today, "There are no events scheduled for today")
-    return render(request, 'discos/cinco.html', {
-    'title': 'El Cinco',
     'party_today': party_today,   
    
                   

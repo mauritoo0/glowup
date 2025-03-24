@@ -24,26 +24,6 @@
 </article>
 
 <article class="card-details">
-    <img src="{% static 'img/shoko.png' %}" class="card-img" alt="Shoko">
-    <div class="card-content-details">
-        <div class="card-text-details">
-            <span class="details-disco">Paseo de la Barceloneta - 08003</span>
-            <span class="details-disco">Open everynight</span>
-            <span class="details-disco">0.00h - 5.30h</span>
-            <span class="details-disco">Reggaeton - Hip Hop - Top Hits - Comercial</span>
-            <span class="details">+500 people capacity</span>
-            <span class="details-disco">+18</span>
-            <span class="details-disco">Casual & elegant</span>
-            <a href="https://shoko.biz/" class="details-disco" target="_blank">Oficial website</a>
-            <button class="join">
-                <a href="{% url 'shoko' %}">LIST FOR TONIGHT</a>
-            </button>
-            
-        </div>
-    </div>
-</article>
-
-<article class="card-details">
     <img src="{% static 'img/opium.png' %}" class="card-img" alt="Opium" id="img-opium">
     <div class="card-content-details">
         <div class="card-text-details">
@@ -75,39 +55,20 @@
             <span class="details-disco">+18</span>
             <span class="details-disco">Casual & elegant</span>
             <a href="https://downtownbarcelona.es/" class="details-disco" target="_blank">Oficial website</a>
-            {% if party_today == True %}
+            {% if party_today %}
             <button class="join">
                 <a href="{% url 'downtown' %}">LIST FOR TONIGHT</a>
             </button>
             {% else %}
                 <div class="details-not-today">There are no events scheduled for today</div>
+                <button class="join">
+                    <a href="{% url 'downtown' %}">WEEKEND LISTS</a>
+                </button>
             {% endif %}
         </div>
     </div>
 </article>
 
-<article class="card-details">
-    <img src="{% static 'img/elcinco.png' %}" class="card-img" alt="El Cinco">
-    <div class="card-content-details">
-        <div class="card-text-details">
-            <span class="details-disco">Plaça de Joan Llongueras, 5</span>
-            <span class="details-disco">Open Thursdays, Fridays & Saturdays</span>
-            <span class="details-disco">0.00h - 5.30h</span>
-            <span class="details-disco">Reggaeton - Top Hits</span>
-            <span class="details">+500 people capacity</span>
-            <span class="details-disco">+18</span>
-            <span class="details-disco">Casual</span>
-            <a href="https://www.elcinco.barcelona/" class="details-disco" target="_blank">Oficial website</a>
-            {% if party_today == True %}
-            <button class="join">
-                <a href="{% url 'elcinco' %}">LIST FOR TONIGHT</a>
-            </button>
-            {% else %}
-                <div class="details-not-today">There are no events scheduled for today</div>
-            {% endif %}
-        </div>
-    </div>
-</article>
 
 <article class="card-details">
     <img src="{% static 'img/labiblio.png' %}" class="card-img" alt="La Biblio">
@@ -127,10 +88,42 @@
             </button>
             {% else %}
                 <div class="details-not-today">There are no events scheduled for today</div>
+                <button class="join">
+                    <a href="{% url 'biblio' %}">WEEKEND LISTS</a>
+                </button>
             {% endif %}
         </div>
     </div>
 </article>
+
+
+
+<article class="card-details">
+    <img src="{% static 'img/otto.png' %}" class="card-img" alt="Otto">
+    <div class="card-content-details">
+        <div class="card-text-details">
+            <span class="details-disco">Carrer de Lincoln, 15 - 08006</span>
+            <span class="details-disco">Open Thursdays, Fridays & Saturdays</span>
+            <span class="details-disco">0.00h - 5.30h</span>
+            <span class="details-disco">Reggaeton - Hip Hop - Top Hits - Comercial</span>
+            <span class="details">+1.000 people capacity</span>
+            <span class="details-disco">+18</span>
+            <span class="details-disco">Casual</span>
+            <a href="https://www.ottozutz.com/" class="details-disco" target="_blank">Oficial website</a>
+            {% if party_today == True %}
+            <button class="join">
+                <a href="{% url 'otto' %}">LIST FOR TONIGHT</a>
+            </button>
+            {% else %}
+                <div class="details-not-today">There are no events scheduled for today</div>
+                <button class="join">
+                    <a href="{% url 'otto' %}">WEEKEND LISTS</a>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+</article>
+
 </div>
 
 

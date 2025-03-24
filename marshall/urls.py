@@ -27,10 +27,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('photos/', views.photos, name='photos'),
     path('pacha/', views.pacha, name='pacha'),
-    path('shoko/', views.shoko, name='shoko'),
+    path('otto/', views.otto, name='otto'),
     path('opium/', views.opium, name='opium'),
     path('downtown/', views.downtown, name='downtown'),
-    path('elcinco/', views.elcinco, name='elcinco'),
     path('biblio/', views.biblio, name='biblio'),
     path('cookies/', views.cookies, name='cookies'),
     

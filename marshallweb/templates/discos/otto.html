@@ -4,7 +4,7 @@
 
 
 <div class="img-title-club">
-    <img src="{% static 'img/downtown.png' %}" alt="Downtown">
+    <img src="{% static 'img/otto.png' %}" alt="Otto" id="otto-title">
 </div>
 
 <div class="date-disco">
@@ -18,7 +18,7 @@
 </p>
 
 <div class="img-club">
-    <img src="{% static 'img/downtownreel.jpg' %}" alt="Downtown">
+    <img src="{% static 'img/ottoreel.jpg' %}" alt="Otto">
 </div>
 
 <div class="event-description">
@@ -27,14 +27,14 @@
 
     <span class="details"><strong><u>Schedule</u></strong>: 0.00h - 5.30h</span>
     <span class="details"><strong><u>Age</u></strong>: +18</span>
-    <span class="details"><strong><u>Club capacity</u></strong>: 500</span>
-    <span class="details"><strong><u>How to get there</u></strong>: Metro stop: L5 Blue (Ernest Lluch) - L3 Green (Z. Universitaria)</span>
-    <span class="details"><strong><u>Dresscode</u></strong>: Casual & elegant</span>
+    <span class="details"><strong><u>Club capacity</u></strong>: +1000 </span>
+    <span class="details"><strong><u>How to get there</u></strong>: Metro stop: L3 Green (Fontana) - Train stop: S1, S2, L6 and L7 (Gràcia)</span>
+    <span class="details"><strong><u>Dresscode</u></strong>: Casual </span>
 </div>
 
 <p class="address">
-    Av. Dr. Marañón, 17 - Barcelona<br>
-    <a href="https://maps.app.goo.gl/9ecKWikrVgNs63mR6" target="_blank">SEE MAP</a>
+    Carrer de Lincoln, 15<br> 08006 - Barcelona<br>
+    <a href="https://maps.app.goo.gl/UmazBas6azsCWxbb9" target="_blank">SEE MAP</a>
 </p>
 
 
@@ -51,23 +51,24 @@
     </div>
 
 
-<div class="by-date">
-    <button class="by-date-button">
-        <div>SELECT DAY +</div>
-    </button>   
-    <ul class="by-date-list">
-        <li>
-            <a href="{% url 'date' 'thursday' %}">Thursday</a>
-        </li>
-        <li>
-            <a href="{% url 'date' 'friday' %}">Friday</a>
-        </li>
-        <li>
-            <a href="{% url 'date' 'saturday' %}">Saturday</a>
-        </li>
-        
-    </ul>
-</div>
+
+    <div class="by-date">
+        <button class="by-date-button">
+            <div>SELECT DAY +</div>
+        </button>   
+        <ul class="by-date-list">
+            <li>
+                <a href="{% url 'date' 'thursday' %}">Thursday</a>
+            </li>
+            <li>
+                <a href="{% url 'date' 'friday' %}">Friday</a>
+            </li>
+            <li>
+                <a href="{% url 'date' 'saturday' %}">Saturday</a>
+            </li>
+            
+        </ul>
+    </div>
 
 
 {% endblock %}

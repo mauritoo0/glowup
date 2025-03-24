@@ -30,7 +30,7 @@
 
     /*Header */
     .header {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #f0cdd9), url('img/marshall2.jpg');
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #8f7b82), url('img/glowup.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -191,10 +191,11 @@
 
     .footer {
         padding: 0 0 3% 0;
-        background-image: url('./img/marshall3.jpg');
-        background-size:cover;
-        background-position: center;
+        background-image: url('./img/glowupbig.jpg');
+        background-size: contain;
+        background-position:center;
         background-repeat: no-repeat;
+        background-color: black;
         border-top: #f0cdd9;
         border-top-style:inset;
         display: flex;
@@ -234,7 +235,8 @@
     .footer-text-rights{
         display: flex;
         margin-top: 6vh;
-        margin-left: 40%;
+        padding: 0 0 0 2%;
+        
     
     }
 
@@ -305,7 +307,6 @@
     }
 
     .card-container{
-         
         display: flex;
         width: 100%;
         flex-direction: column;    
@@ -317,23 +318,26 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 30vh;
+        height: 20%;
         overflow: hidden;
         position: relative;
     }
     
     .carousel {
+        display: flex;
         overflow: hidden;
+        height: auto;
         
     }
     
     .carousel-track {
         display: flex;
         transition: transform 0.3s ease-in-out;
+        height: auto;
     }
     
     .pic {
-        width: 100%; 
+        width: 100vw; 
         height: 100%;    
         display: flex;
         justify-content: center;
@@ -342,7 +346,7 @@
     }
     
     .pic img {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         object-fit: cover;
     }
@@ -667,6 +671,10 @@
         width: 60%;
         
     }
+
+    #otto-title{
+        width: 40%;
+    }
     
     /* Day title for template's clubs */
 
@@ -880,16 +888,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to right, #f7d6ec, #fffeff);
         height: 400px;
         width: 90%;
+        background: linear-gradient(to bottom, rgba(158, 158, 158, 0) 10%, #919191);
         border-radius: 5px;
-        box-shadow: 3px 3px 10px #000000;
+        border: 0.5px #666565;
+        box-shadow: 2px 5px 10px #666565;
          
      }
 
-    .card-details, #pacha-img{
-        filter: none,
+    #pacha-img{
+        filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+        
     } 
 
     }
@@ -904,7 +914,7 @@
     .card-text-details{
         display: flex;
         flex-direction: column;
-        color:rgba(0, 0, 0, 0.747);
+        color:rgb(230, 230, 230);
         justify-content: center;
         text-align: center;
         padding: 5%;
@@ -944,9 +954,10 @@
         align-self: center;
         margin: 5% 0;
         text-decoration: none;
-        color:rgba(0, 0, 0, 0.747);
+        color:rgba(255, 221, 221, 0.801);
         cursor: pointer;
     }
+
     
     .details-not-today{
         font-size: 70%;
@@ -954,11 +965,24 @@
     }
 
     /*END 'NIGHTCLUBS' TEMPLATE*/
+
+
+    /* 'COOKIES' TEMPLATE*/
+    .main-cookies {
+        color: white;
+        padding: 50px;
+        
+    }
+    
+    .main-cookies > h1{
+        margin-top: 20px;
+    }
+
 /*END PHONE STYLES-------------------------------/*
 
 /*TABLET STYLES*/
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     * {
         padding: 0;
         margin: 0;
@@ -989,7 +1013,7 @@
 
     /*Header */
     .header {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #f0cdd9), url('img/marshall2.jpg');
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #8f7b82), url('img/glowup.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1149,16 +1173,16 @@
     /* footer */
 
     .footer {
-        padding: 0 0 3% 0;
-        background-image: url('./img/marshall3.jpg');
-        background-size:cover;
-        background-position: center;
+        background-image: url('./img/glowupbig.jpg');
+        background-size:contain;
+        background-color: black;
+        background-position:50% 15px;
         background-repeat: no-repeat;
         border-top: #f0cdd9;
         border-top-style:inset;
         display: flex;
         width: 100%;
-        height: 10vh;
+        height: 110px;
         flex-direction: column;
         
         
@@ -1192,8 +1216,8 @@
 
     .footer-text-rights{
         display: flex;
-        margin-top: 9%;
-        margin-left: 60%;
+        padding: 0 0 0 2%;
+        
     
     }
 
@@ -1277,7 +1301,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 40vh;
+        
         overflow: hidden;
         position: relative;
     }
@@ -1293,7 +1317,7 @@
     }
     
     .pic {
-        width: 100%; 
+        width: 100vw; 
         height: 100%;    
         display: flex;
         justify-content: center;
@@ -1302,7 +1326,7 @@
     }
     
     .pic img {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         object-fit: cover;
     }
@@ -1553,7 +1577,6 @@
 
     .by-date-button{
         width: 30%;
-        height: 5vh;
         color: white;
         background-color: transparent;
         border: 1px solid #ac7185;
@@ -1624,14 +1647,15 @@
         align-items: center;
         justify-content: center;
         width: 100vw;
-        height: 20vh;
+        height: 30%;
         
        
     }
 
     .img-title-club img {
-        width: 60%;
-        
+        width: 50%;
+        object-fit: scale-down;
+    
     }
 
     .date-disco{
@@ -1640,7 +1664,7 @@
         align-self: center;
         justify-content: center;
         background: linear-gradient(to right, #000000, #4e4e4e);
-        width: 80%;
+        width: 30%;
         padding: 5px;
         color: #dcdee7;
         border: 1px solid #ac7185;
@@ -1672,7 +1696,7 @@
     /* Disco images */ 
     .img-club {
         width: 90%;
-        height: 25vh;
+        height: 25%;
         align-items: center;
         margin-bottom: 5vh;
     }
@@ -1714,7 +1738,7 @@
     /*Disco's address */ 
     .address{
         width: 80%;
-        padding: 10%;
+        padding: 5%;
         color: rgb(255, 255, 255);
         text-shadow: 1.5px 1.5px 5px rgb(3, 3, 3);
         text-align: center;
@@ -1737,13 +1761,13 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        height: 10vh;
+        height: 30%;
         
     }
 
     .button-register-party {
         width: 40%;
-        height: 55%;
+        height: 50px;
         background-color: #ffffff;
         border-radius: 5px;
         box-shadow: 2px 2px 2px rgb(0, 0, 0);
@@ -1753,8 +1777,6 @@
         color: #383838;  
         text-shadow: 1.5px 1.5px 1px rgb(136, 136, 136);
         font-size: 120%;
-        font-weight: 0;
-        font-weight: 0;
         width: 100%;
         height: 100%;
     }
@@ -1845,25 +1867,22 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to right, #f7d6ec, #fffeff);
+        background: linear-gradient(to bottom, rgba(158, 158, 158, 0) 10%, #919191);
+        border-radius: 5px;
+        border: 0.5px outset #666565;
+        box-shadow: 2px 5px 10px #666565;
         height: 700px;
         width: 90%;
-        border-radius: 5px;
-        box-shadow: 3px 3px 10px #000000;
+        
          
      }
 
-    .card-details, #pacha-img{
-        filter: none,
+     #pacha-img{
+        filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+        object-fit: none;
+        
     } 
 
-    .card-details, #img-opium{
-        object-fit: contain;
-        padding: 5%;
-    } 
-
-
-    
     
     .card-content-details{
         display: flex;
@@ -1875,7 +1894,7 @@
     .card-text-details{
         display: flex;
         flex-direction: column;
-        color:rgba(0, 0, 0, 0.747);
+        color:rgb(230, 230, 230);
         justify-content: center;
         text-align: center;
         padding: 5%;
@@ -1899,20 +1918,20 @@
         text-align: center;
         width: 70%;
         
-        
-
+     
     }
 
-
-    .card-text-details a{
+    .card-text-details > a{
         display: flex;
         align-self: center;
         margin: 5% 0;
         text-decoration: none;
-        color: #f0f0f0;
+        color:rgba(255, 221, 221, 0.801);
         cursor: pointer;
         font-size: 150%;
     }
+
+    
     
     .details-not-today{
         font-size: 120%;
@@ -1920,14 +1939,40 @@
 
     }
         
-       
+    /* Cookie's banner 100% width */
+    .cc-window {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    .cc-compliance {
+        text-align: center;
+    }
+
+    .cc-floating {
+        position: fixed !important;
+        bottom: 0 !important;
+        width: 100% !important;
+    }
+
+    .main-cookies {
+        color: white;
+        padding: 50px;
+        
+    }
+    
+    .main-cookies > h1{
+        margin-top: 20px;
+    }
 }
 
 /*END TABLET STYLES-------------------------------/*
 
 /*PC STYLES*/
 
-@media screen and (min-width: 1025px) {
+@media (min-width: 1025px) {
     *{
         padding: 0;
         margin: 0;
@@ -1955,10 +2000,11 @@
 
     /*Header */
     .header {
-        background-image: url('img/marshall2.jpg');
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #8f7b82), url('img/glowup.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        background-color: black;
         display: flex;
         flex-direction: column;
         height: 20%;
@@ -2002,7 +2048,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        text-align: center;
         background-color: rgba(0, 0, 0, 0.274);
         margin-bottom: 2px;
         
@@ -2010,6 +2056,7 @@
 
     .nav-links li{
         list-style: none;
+        flex: 1;
         
     }
     .nav-links a{
@@ -2066,9 +2113,10 @@
     .footer {
         padding: 0 0 3% 0;
         margin-top: 5%;
-        background-image: url('./img/marshall3.jpg');
-        background-size:cover;
-        background-position: center;
+        background-image: url('./img/glowupbig.jpg');
+        background-size:contain;
+        background-color: black;
+        background-position: 50% 30px;
         background-repeat: no-repeat;
         border-top: #f0cdd9;
         border-top-style:inset;
@@ -2234,6 +2282,10 @@
         display: none;
     }
     
+    #downtownreel {
+        justify-self: start;
+        object-fit:fill;
+    }
 
     /* Date from index */
 
@@ -2475,9 +2527,11 @@
     }
 
     .img-title-club img {
-        width: 40%;
-        
+        object-fit:scale-down;
+        height: 100%;
     }
+
+    
     
     /* Day title for template's clubs */
 
@@ -2768,9 +2822,10 @@
         height: 50vh;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to right, #f7d6ec, #fffeff);
+        background: linear-gradient(to bottom, rgba(158, 158, 158, 0) 10%, #919191);
         border-radius: 5px;
-        box-shadow: 3px 3px 10px #000000;
+        border: 0.5px outset #666565;
+        box-shadow: 2px 5px 10px #666565;
 
     }
 
@@ -2795,7 +2850,7 @@
         margin: 0;
         display: flex;
         flex-direction: column;
-        color:rgba(0, 0, 0, 0.747);
+        color:rgb(224, 224, 224);
         justify-content: center;
         text-align: center;
         padding: 5%;
@@ -2819,6 +2874,7 @@
 
     .join > a{
         margin: 0 !important;
+        font-style: none !important;
         
     }
 
@@ -2826,16 +2882,32 @@
     .card-text-details a{
         display: flex;
         align-self: center;
-        margin: 5% 0 0 0;
-        color:rgba(173, 135, 135, 0.801);
+        margin: 5% 0 1% 0;
+        color:rgba(255, 221, 221, 0.801);
         cursor: pointer;
         font-size: 80%;
+        
+        
     }
+
+    
     
     .details-not-today{
+        margin-top: 10px;
         font-size: 70%;
         text-shadow: 1.5px 1.5px 5px rgb(180, 180, 180);
 
+    }
+
+    /* 'COOKIES' TEMPLATE*/
+    .main-cookies {
+        color: white;
+        padding: 50px;
+        
+    }
+    
+    .main-cookies > h1{
+        margin-top: 20px;
     }
 
 

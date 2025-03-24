@@ -38,13 +38,19 @@
 </p>
 
 
-{% if party_today == True %}
+
 <div class="register-party">
     <button class="button-register-party">
-        <a href="https://www.fourvenues.com/es/marshalls-list?fbclid=PAZXh0bgNhZW0CMTEAAabgyTv-w0DHhYb6akrE5CE_boJMIOhU7cTitoaYy7nYo9DGOipiOFfS6kk_aem_61fOt7tHwzfcd7iqir6xmg" target="_blank">JOIN!</a>
+        <a href="https://www.fourvenues.com/es/marshalls-list?fbclid=PAZXh0bgNhZW0CMTEAAabgyTv-w0DHhYb6akrE5CE_boJMIOhU7cTitoaYy7nYo9DGOipiOFfS6kk_aem_61fOt7tHwzfcd7iqir6xmg" target="_blank">
+            {% if day == 'thursday' or day == 'friday'  or day == 'saturday' %} 
+                JOIN!
+            {% else %}
+                WEEKEND LISTS
+            {% endif %}
+        </a>
     </button>
 </div>
-{% endif %}
+
 
 <div class="by-date">
     <button class="by-date-button">
