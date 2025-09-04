@@ -191,7 +191,7 @@
 
     .footer {
         padding: 0 0 3% 0;
-        background-image: url('./img/glowupbig.jpg');
+        background-image: url('img/glowupbig.jpg');
         background-size: contain;
         background-position:center;
         background-repeat: no-repeat;
@@ -265,7 +265,7 @@
         height: 100px;
         position: fixed;
         color: white;
-        background-image: url('./img/contact/ia.jpg');
+        background-image: url('img/contact/ia.jpg');
         background-size: cover;
         background-position: center;
         opacity: 0.7;
@@ -1173,7 +1173,7 @@
     /* footer */
 
     .footer {
-        background-image: url('./img/glowupbig.jpg');
+        background-image: url('img/glowupbig.jpg');
         background-size:contain;
         background-color: black;
         background-position:50% 15px;
@@ -1246,7 +1246,7 @@
         height: 100px;
         position: fixed;
         color: white;
-        background-image: url('./img/contact/ia.jpg');
+        background-image: url('img/contact/ia.jpg');
         background-size: cover;
         background-position: center;
         opacity: 0.7;
@@ -1580,6 +1580,7 @@
 
     .by-date-button{
         width: 30%;
+        padding: 1rem;
         color: white;
         background-color: transparent;
         border: 1px solid #ac7185;
@@ -2116,7 +2117,7 @@
     .footer {
         padding: 0 0 3% 0;
         margin-top: 5%;
-        background-image: url('./img/glowupbig.jpg');
+        background-image: url('img/glowupbig.jpg');
         background-size:contain;
         background-color: black;
         background-position: 50% 10px;
@@ -2194,7 +2195,7 @@
         height: 100px;
         position: fixed;
         color: white;
-        background-image: url('./img/contact/ia.jpg');
+        background-image: url('img/contact/ia.jpg');
         background-size: cover;
         background-position: center;
         opacity: 0.7;
