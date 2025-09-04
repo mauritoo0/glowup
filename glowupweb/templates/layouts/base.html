@@ -3,11 +3,13 @@
 <head>
     
     {% load static %}
+     <!-- Cookie consent CSS from CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.0/build/cookieconsent.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Familjen+Grotesk:wght@400..700&family=Genos:wght@100..900&family=Goldman:wght@400;700&family=Raleway:wght@100..900&family=Rowdies:wght@300&family=Sarabun:wght@100..800&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -16,9 +18,10 @@
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
-
+     <!-- Main container for all site content -->
     <div class="main-container">
         <header class="header">
+            <!-- Social media links -->
             <div class="rrss">
                 <a href="https://www.instagram.com/marshallsguestlist" target="_blank" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
@@ -28,6 +31,7 @@
                 </a>
                 
             </div>
+             <!-- Navigation bar -->
             <nav class="navbar">
                 <button class="menu-toggle" aria-label="Toggle navigation">
                     <p>☰</p>
@@ -40,7 +44,7 @@
                     <li>
                         <a href="{% url 'nightclubs' %}">NIGHTCLUBS</a>
                     </li>
-                    <!--          
+                    <!-- Uncomment if Photos page is needed        
                     <li>
                         <a href="{% url 'photos' %}">PHOTOS</a>
                     </li>
@@ -51,6 +55,7 @@
                     
                 </ul>
             </nav>
+            <!-- Back button only appears if the current page is not the home -->
             {% if request.path != '/' %}
                 <button class="back" onclick="window.history.back();">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -58,30 +63,31 @@
             
             {% endif %}
         </header>
+        <!-- Main content block that other templates will override -->
         <div class="main-content">
             {% block content %}
 
             {% endblock %}
         </div>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-you">
             <p>Working with: </p>
             <img src="{% static 'img/you.jpg' %}" alt="You">
         </div>  
-
+         <!-- Copyright and privacy -->
         <div class="footer-text-rights">
             <p><a href="#">Privacy Policy</a> - Copyright. All rights reserved. 2025
             </p>
         </div>     
     </footer>
 </div>
-
+<!-- Floating bot link -->
 <a class="ia" href="https://chatgpt.com/g/g-673bab86821c81918f82c685119ee8ac-clubbing-barcelona" target="blank">
     <i class="fa-solid fa-question"></i>
     <h1 class="help-bot">PARTY<br>BOT</h1>
 </a> 
-
+<!-- Cookie consent  -->
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.0/build/cookieconsent.min.js"></script>
     <script>
         window.addEventListener("load", function(){
