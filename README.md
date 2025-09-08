@@ -15,6 +15,11 @@ There is a section called “Nightclubs” that displays all associated nightclu
 🔗 <a href="http://maurofavieri.pythonanywhere.com">Click here to see the project live</a>
 
 ## Screenshots
+![Homepage](screenshots/1.jpg).
+![Web screen](screenshots/2.jpg)
+![Web screen](screenshots/3.jpg)
+![Web screen](screenshots/4.jpg)
+![Web screen](screenshots/5.jpg)
 
 
 Author / Contact
