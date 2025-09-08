@@ -12,7 +12,7 @@ There is a section called “Nightclubs” that displays all associated nightclu
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## Live Demo
-🔗 <a href="maurofavieri.pythonanywhere.com">Click here to see the project live</a>
+🔗 <a href="http://maurofavieri.pythonanywhere.com">Click here to see the project live</a>
 
 ## Screenshots
 
